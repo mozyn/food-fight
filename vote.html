@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+<link rel="manifest" href="/image/site.webmanifest">
+    <title>Vote for Your Favorite Food</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/css/vote.css"/>
+  </head>
+  <body>
+    <div class="slide-up-shake">
+    <h2 class="text-center mt-5">Choose One! 🥊👊 </h2>
+    <div class="container mt-5 text-center">
+      <div class="fighting-container">
+      <div id="food-options">
+    <button id="option1" class="btn fight-btn"></button>
+    <button id="option2" class="btn fight-btn"></button>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Voted Modal -->
+<div class="modal fade" id="alreadyVotedModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Already Voted ⚠️</h5>
+      </div>
+      <div class="modal-body">
+        You have already voted on this fight. Redirecting to results in <span id="countdown">5</span> seconds...
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Winner Modal -->
+<div class="modal fade" id="winnerModal" tabindex="-1" role="dialog" aria-labelledby="winnerModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="winnerModalLabel">And the winner is...</h5>
+      </div>
+      <div class="modal-body">
+        <!-- Winner will be dynamically added here -->
+        <span id="winnerName"></span> 🎉
+      </div>
+      <div class="modal-footer">
+        Redirecting to results...
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/scripts/voting.js"></script>
+
+  </body>
+</html>

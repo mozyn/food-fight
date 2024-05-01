@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
+    <link rel="manifest" href="/image/site.webmanifest">
+
+    <title>Food Fight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/admin.css" />
+
+</head>
+
+<body>
+    <div class="slide-up-shake">
+        <div class="container mt-5">
+            <h1>Food Fight</h1>
+            <form id="food-form">
+                <div class="form-group">
+                    <label for="food-input" style="display: inline-block;">Add a food option:</label>
+                    <div id="suggestion-buttons" style="display: inline-block;"></div>
+                    <br>
+                    <input type="text" id="food-input" class="form-control" placeholder="Enter food option" />
+                </div>
+                <button type="submit" id="add-to-list" class="btn btn-primary">
+                    Add
+                </button>
+            </form>
+            <h2 class="mt-5">Food Options</h2>
+            <p class="text-center">Swipe left or right to delete a food option.</p>
+
+            <ul id="food-list" class="list-group">
+                <!-- Food options will be dynamically added here -->
+            </ul>
+            <br>
+            <div class="tooltip-wrapper disabled" data-placement="bottom" data-toggle="tooltip"
+                title="Add at least 2 foods to enable this button.">
+                <button id="generate-link" class="btn btn-primary" disabled>Start</button>
+            </div>
+
+            <!-- Link Copied Modal -->
+            <div class="modal fade" id="linkCopiedModal" tabindex="-1" role="dialog"
+                aria-labelledby="linkCopiedModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="linkCopiedModalLabel">Redirecting...</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Link copied to clipboard. Time to vote! 🗳️
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>

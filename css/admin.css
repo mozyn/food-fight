@@ -1,0 +1,195 @@
+body, html {
+    cursor: url('/image/pointer.png'), auto;
+    font-family: 'Staatliches', cursive;
+    font-size: 24px;
+    background-color: #1a1a1a;
+    color: white;
+   overflow-x: hidden; 
+}
+
+a, button,input[type="submit"], .clickable-element {
+    cursor: url('/image/hover-glove.png'), pointer !important;
+}
+
+.tooltip-wrapper {
+    display: inline-block;
+}
+
+.tooltip-wrapper .btn[disabled] {
+    pointer-events: none;
+}
+
+.tooltip-wrapper.disabled {
+    cursor: not-allowed;
+}
+
+.toast {
+    position: absolute;
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+    width: 100%;    /* Full width on small screens */
+    max-width: 300px;
+}
+
+.container {
+    padding: 20px; /* Adds padding for better spacing */
+}
+
+h1, h2 {
+    text-align: center; /* Centers the headers */
+    margin-bottom: 30px; /* Adds some margin for better spacing */
+}
+
+#food-form {
+    margin-bottom: 30px; /* Adds some margin for better spacing */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .toast {
+        width: auto; /* Reset to auto width */
+    }
+
+    h1, h2 {
+        text-align: left; /* Align left for larger screens */
+    }
+}
+
+
+/* Default styling for larger screens */
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Increase sizes for mobile screens */
+
+@media (max-width: 767px) {
+    body, html {
+        font-size: 18px; /* Increase base font size */
+    }
+
+    .btn {
+        padding: 15px 30px;
+        font-size: 1.25rem; /* Larger button text */
+    }
+}
+
+.swiped-left {
+    animation: swipe-left 0.5s forwards;
+}
+
+.swiped-right {
+    animation: swipe-right 0.5s forwards;
+}
+
+@keyframes swipe-left {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes swipe-right {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-2px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(2px);
+    }
+}
+
+.slide-up-shake {
+    animation: slideUp 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+/* Styling for the food list */
+.food-option {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    touch-action: pan-x;
+}
+
+.modal-content {
+  border: 2px solid gray; 
+    background-color: black;
+    color: white;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.modal-title {
+    color: white;
+}
+
+.close {
+    color: white;
+}
+
+.close:hover {
+    color: #ff1919;
+}
+
+.panning {
+  transition: none !important;
+}
+
+.smooth-return {
+    transition: transform 0.3s ease-out;
+}
+
+
+
+.suggestion-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 2px 20px; /* Reduced vertical padding */
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.suggestion-button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+.fade-in {
+    opacity: 1;
+}
+
+

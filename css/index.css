@@ -1,0 +1,192 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    cursor: url('/image/pointer.png'), auto;
+      font-family: 'Staatliches', cursive;
+    font-size: 16px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+}
+
+a, button,input[type="submit"], .clickable-element {
+    cursor: url('/image/hover-glove.png'), pointer !important;
+}
+
+.large-btn {
+    width: auto;
+    font-size: 2rem;
+    padding: 20px 40px;
+    border-radius: 15px;
+}
+
+.btn-primary {
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-info {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.btn-info:hover {
+    background-color: white;
+    color: black;
+}
+
+.excited-button {
+    animation: float 3s infinite;
+}
+
+.excited-button:hover {
+    animation: bounce 1s infinite, shake 0.5s infinite;
+}
+
+.excited-header {
+    animation: bounce 2s infinite, shake 1s infinite;
+}
+
+@media (min-width: 768px) {
+    .large-btn {
+        width: auto;
+        font-size: 2rem;
+        padding: 20px 40px;
+    }
+
+    #header {
+        font-size: 3rem;
+    }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Shake Animation */
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#header {
+    font-size: 150px;
+    color: rgba(225, 225, 225, .01);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background-image: url("/image/junk_food.jpeg");
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+  animation: animate 40s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+@keyframes animate {
+    0%, 100% {
+      background-position: left top;
+    }
+    25%{
+      background-position: right bottom;
+     }
+    50% {
+      background-position: left bottom;
+    }
+    75% {
+      background-position: right top;
+    }   
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    z-index: 55;
+}
+.first {
+    background-color: black;
+}
+.second{
+    left: 50%;
+    background-color: white;
+}
+
+/* Media query for non-mobile */
+@media (min-width: 768px) {
+    #header {
+        font-size: 200px; /* Made the header text larger on desktop */
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center; 
+        height: 100vh; 
+    }
+
+}
+
+
+/* Media query for mobile */
+@media (max-width: 767px) {
+    #header {
+        font-size: 100px; /* Adjusted the font size of the header for smaller screens */
+        margin-bottom: 20px; /* Added some margin below the header */
+    }
+
+    .large-btn {
+        font-size: 1.5rem; /* Adjusted the font size of the buttons */
+        padding: 10px 20px; /* Adjusted the padding of the buttons */
+    }
+
+    .container {
+        padding: 10px; /* Added some padding to the container */
+    }
+
+}
